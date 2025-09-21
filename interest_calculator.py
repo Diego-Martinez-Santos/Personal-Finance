@@ -10,6 +10,7 @@ def compound_capitalization(C0, i, n, i_const, i_tasas = None):
     if i_const:
         CF = C0 * (1 + i)**n
         return CF
+    
     elif i_const == False:
         product_tasas = 0
         for i_tasa in i_tasas:
@@ -17,6 +18,9 @@ def compound_capitalization(C0, i, n, i_const, i_tasas = None):
 
         CF = C0 * product_tasas
         return CF
+    
+    else:
+        return None
 
 
 
